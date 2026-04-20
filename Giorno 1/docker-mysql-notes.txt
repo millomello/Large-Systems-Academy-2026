@@ -1,0 +1,32 @@
+docker volume create mysql_data
+
+docker volume ls
+
+docker run -d \
+  --name mysql-db \
+  -p 5432:3306 \
+  -v mysql_data:/var/lib/mysql \
+  -e MYSQL_DATABASE=academy_db \
+  -e MYSQL_USER=academy_user \
+  -e MYSQL_PASSWORD=StrongPassword123 \
+  -e MYSQL_ROOT_PASSWORD=RootPassword123 \
+  mysql:latest
+
+  docker ps
+  CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+6f49a0082da1   mysql:latest   "docker-entrypoint.s…"   40 minutes ago   Up 27 minutes   0.0.0.0:5432->3306/tcp, [::]:5432->3306/tcp   mysql-db
+
+Test DB effettuato su DBeaver
+CREATE TABLE testtable (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+INSERT into testtable (name, email, created_at) values ('fiffa', 'fiffamagica@bacini.lol', SYSDATE());
+
+docker stop mysql-db;     
+
+docker start mysql-db;     
+
+SELECT * FROM testtable;
