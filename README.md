@@ -1,6 +1,6 @@
 Primo progetto Git - Academy 2026
 
-Storia del progetto
+# Storia del progetto
 
 lorenzo@MacBook-Pro-di-Lorenzo progetto-academy % git log --oneline
 680803d (HEAD -> master, feature/saluto) aaaaaaaaa
