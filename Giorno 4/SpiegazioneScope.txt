@@ -1,0 +1,11 @@
+APPLICATION scope:
+- dati condivisi tra tutti gli utenti
+- esempio: numero visite sito
+
+SESSION scope:
+- dati per singolo utente
+- esempio: carrello utente
+
+REQUEST scope:
+- dati temporanei di una singola richiesta
+- esempio: parametri form
