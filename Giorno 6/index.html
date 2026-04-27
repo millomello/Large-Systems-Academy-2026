@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Directory</title>
+</head>
+
+<body>
+  <header>
+    <h1>User Directory</h1>
+  </header>
+
+  <main>
+    <section id="search-section">
+      <h2>Cerca utente</h2>
+
+      <form id="search-form" action="#" method="get">
+        <label for="search-input">Nome o email:</label>
+        <input
+          type="search"
+          id="search-input"
+          name="q"
+          placeholder="Es. Mario Rossi"
+          autocomplete="off"
+        />
+        <button type="submit">Cerca</button>
+      </form>
+    </section>
+
+    <section id="user-list-section">
+      <h2>Utenti (<span id="user-count">5</span>)</h2>
+
+      <ul id="user-list">
+
+        <li class="user-item">
+          <article>
+            <h3>
+              <a href="user-detail.html?id=1">Mario Rossi</a>
+            </h3>
+            <p>mario.rossi@email.com</p>
+            <p>Roma, Italia</p>
+          </article>
+        </li>
+
+        <li class="user-item">
+          <article>
+            <h3>
+              <a href="user-detail.html?id=2">Laura Bianchi</a>
+            </h3>
+            <p>laura.bianchi@email.com</p>
+            <p>Milano, Italia</p>
+          </article>
+        </li>
+
+        <li class="user-item">
+          <article>
+            <h3>
+              <a href="user-detail.html?id=3">Luca Ferrari</a>
+            </h3>
+            <p>luca.ferrari@email.com</p>
+            <p>Torino, Italia</p>
+          </article>
+        </li>
+
+        <li class="user-item">
+          <article>
+            <h3>
+              <a href="user-detail.html?id=4">Sofia Esposito</a>
+            </h3>
+            <p>sofia.esposito@email.com</p>
+            <p>Napoli, Italia</p>
+          </article>
+        </li>
+
+        <li class="user-item">
+          <article>
+            <h3>
+              <a href="user-detail.html?id=5">Andrea Conti</a>
+            </h3>
+            <p>andrea.conti@email.com</p>
+            <p>Firenze, Italia</p>
+          </article>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>
